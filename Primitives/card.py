@@ -1,5 +1,5 @@
-from Primitives.player import Player
-from Primitives.type import Type
+import Primitives.player
+import Primitives.type
 
 
 class Card(object):
@@ -34,4 +34,4 @@ class Card(object):
 
 class ManaCard(Card):
     def types(self):
-        return [Type.Mana]
+        return [Primitives.type.Type.Mana]

@@ -1,6 +1,5 @@
-from Primitives.basic_piles import *
-from Decks.starting_deck import StartingDeck
-import random
+import DataBase.basic_decks as starting_deck
+import Primitives.pile as pile
 
 
 class Player(object):
@@ -14,13 +13,13 @@ class Player(object):
         self.game = game
 
         if not hand:
-            self.hand = EmptyHand()
+            self.hand = pile.EmptyDiscard()
         if not discard:
-            self.discard = EmptyDiscard()
+            self.discard = pile.EmptyDiscard()
         if not deck:
-            self.deck = StartingDeck()
+            self.deck = starting_deck.StartingDeck
         if not in_play:
-            self.in_play = InPlay()
+            self.in_play = pile.InPlay()
 
         self.action = 0
         self.mana = 0

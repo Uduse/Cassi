@@ -1,10 +1,8 @@
-from Primitives.card import ManaCard
-from Primitives.type import Type
-from Primitives.player import Player
-from Primitives.creature import Creature
+import Primitives.card as card
+import Primitives.creature as creature
 
 
-class ManaDrop(ManaCard):
+class ManaDrop(card.ManaCard):
     def __init__(self, owner=None):
         super().__init__("Mana Drop", owner)
 
@@ -18,7 +16,7 @@ class ManaDrop(ManaCard):
         self.owner.add_mana(1)
 
 
-class ManaCrystal(ManaCard):
+class ManaCrystal(card.ManaCard):
     def __init__(self, owner=None):
         super().__init__("Mana Crystal", owner)
 
@@ -32,7 +30,7 @@ class ManaCrystal(ManaCard):
         self.owner.add_mana(2)
 
 
-class ManaRock(ManaCard):
+class ManaRock(card.ManaCard):
     def __init__(self, owner=None):
         super().__init__("Mana Rock", owner)
 
@@ -46,7 +44,7 @@ class ManaRock(ManaCard):
         self.owner.add_mana(3)
 
 
-class Slime(Creature):
+class Slime(creature.Creature):
     def __init__(self, owner=None):
         super().__init__("Slime", 1, 1, owner)
 
@@ -57,7 +55,7 @@ class Slime(Creature):
         return "Stupid Creature"
 
 
-class Wolf(Creature):
+class Wolf(creature.Creature):
     def __init__(self, owner=None):
         super().__init__("Wolf", 2, 2, owner)
 
@@ -65,7 +63,7 @@ class Wolf(Creature):
         return 5
 
 
-class Guard(Creature):
+class Guard(creature.Creature):
     def __init__(self, owner=None):
         super().__init__("Guard", 3, 3, owner)
 
@@ -73,7 +71,7 @@ class Guard(Creature):
         return 8
 
 
-class RanXu(Creature):
+class RanXu(creature.Creature):
     def __init__(self, owner=None):
         super().__init__("Ran Xu", 0, 1, owner)
 
