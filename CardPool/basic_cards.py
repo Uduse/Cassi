@@ -75,7 +75,7 @@ class Guard(Creature):
 
 class RanXu(Creature):
     def __init__(self, owner=None):
-        super().__init__("Ran Xu", 0, 1, owner)
+        super().__init__("Ran Xu", 1, 1, owner)
 
     def cost(self):
         return 20
